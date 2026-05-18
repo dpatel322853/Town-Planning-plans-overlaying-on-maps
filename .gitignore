@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.env
+backend/work/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+*.zip
+*.tif
+*.tiff
+*.kmz
+*.png
+*.pdf

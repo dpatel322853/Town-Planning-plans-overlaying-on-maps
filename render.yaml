@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: tp-overlay-api
+    env: docker
+    rootDir: backend
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: CORS_ALLOW_ORIGINS
+        value: "*"
+
+  - type: web
+    name: tp-overlay-frontend
+    env: static
+    rootDir: frontend
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_BACKEND_URL
+        value: https://tp-overlay-api.onrender.com
